@@ -539,6 +539,14 @@ devel_mode_rules_var = {
 		-- -----------------------------------------------
 		-- 80. /var/*
 
+		-- Compensate for the fact that TeamCity and a few other CI tools build 
+		-- out of /var which will plain flat not work right without the override
+		-- here.
+		--
+		-- FCE (07-31-13)
+		{prefix = "/var/TeamCity", force_orig_path = true, 
+		 readonly = false};
+
 		{prefix = "/var/run/resolvconf", force_orig_path = true,
 		 readonly = true},
 
