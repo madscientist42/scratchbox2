@@ -32,3 +32,11 @@ include/scratchbox2_version.h
 .cproject
 .project
 .settings
+/build-stamp
+/debian/files
+/debian/libsb2.debhelper.log
+/debian/libsb2.substvars
+/debian/libsb2
+/debian/scratchbox2.debhelper.log
+/debian/scratchbox2.substvars
+/debian/scratchbox2
