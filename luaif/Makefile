@@ -1,4 +1,5 @@
 LUASRC = luaif/lua-5.1.4/src
+#LUASRC = luaif/LuaJIT-2.0.4/src
 
 objs := $(D)/luaif.o $(D)/sb_log.o $(D)/paths.o $(D)/argvenvp.o
 
