@@ -25,6 +25,24 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+
+// Correct for a potential problem with some of the header files having macro 
+// drift on us- basically, it cowpiles instead of compiles with the latest versions
+// of GCC/glibc because they changed up a bunch of the rules for using bits/libc-lock.h
+// and they aren't clearly spelled out...sigh...    FCE (03/31/16)
+#if !defined(PASTE_NAME)
+	#define PASTE_NAME(a,b)      PASTE_NAME1 (a,b)
+#endif 
+#if !defined(PASTE_NAME1)
+	#define PASTE_NAME1(a,b)     a##b
+#endif
+#if !defined(IN_MODULE)
+	#define IN_MODULE PASTE_NAME (MODULE_, MODULE_NAME)
+#endif 
+#if !defined(IS_IN)
+	#define IS_IN(lib) (IN_MODULE == MODULE_##lib)
+#endif
+
 #include <bits/libc-lock.h>
 #if 0
 #include <sysdep-cancel.h>
