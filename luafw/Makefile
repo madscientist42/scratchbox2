@@ -9,7 +9,7 @@ lua_sources_expanded = $(foreach v,$(lua_sources),$(LUASRC)/$(v))
 
 lua_objs := $(lua_sources_expanded:.c=.o)
 
-objs := $(D)/luaif.o $(D)/sb_log.o $(D)/paths.o $(D)/argvenvp.o
+objs := $(D)/luaif/luaif.o $(D)/luaif/sb_log.o $(D)/luaif/paths.o $(D)/luaif/argvenvp.o
 
 $(D)/sb_log.o: preload/exported.h include/scratchbox2_version.h
 
