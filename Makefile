@@ -55,13 +55,13 @@ PROTOTYPEWARNINGS=-Wmissing-prototypes -Wstrict-prototypes
 
 # targets variable will be filled by llbuild
 targets = 
-subdirs = luaif preload utils
+subdirs = luafw preload utils
 
 -include config.mak
 
 CFLAGS += -O2 -g -Wall -W
 CFLAGS += -I$(OBJDIR)/include -I$(SRCDIR)/include
-CFLAGS += -I$(SRCDIR)/luaif/lua-5.1.4/src
+CFLAGS += -I$(SRCDIR)/luafw/lua-5.1.4/src
 CFLAGS += -D_GNU_SOURCE=1 -D_LARGEFILE_SOURCE=1 -D_LARGEFILE64_SOURCE=1
 CFLAGS += -DSCRATCHBOX_ROOT="$(prefix)"
 CFLAGS += $(MACH_CFLAG)
