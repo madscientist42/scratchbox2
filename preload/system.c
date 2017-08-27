@@ -18,6 +18,16 @@
    Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
    02111-1307 USA.  */
 
+// FIXME -- Nasty *ss hack.  Suppress unused variable notifications...
+// 
+// This needs to be revisited with the re-work now back in progress
+// to clean house and modernize.  We need this sort of functionality
+// but I'm...unsure...it needs to be a cribbed-from chunk of glibc
+// that does this.  We just need to track the interface and overlay
+// it properly for Scratchbox... f  
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-variable"
+
 #include <errno.h>
 #include <signal.h>
 #include <stddef.h>
@@ -43,8 +53,8 @@
 	#define IS_IN(lib) (IN_MODULE == MODULE_##lib)
 #endif
 
-#include <bits/libc-lock.h>
 #if 0
+#include <bits/libc-lock.h>
 #include <sysdep-cancel.h>
 #endif
 
@@ -259,4 +269,6 @@ int system_gate(
 	*result_errno_ptr = errno;
 	return(result);
 }
+
+#pragma GCC diagnostic push
 

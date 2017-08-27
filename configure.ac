@@ -5,7 +5,7 @@
 AC_PREREQ(2.59)
 AC_INIT([sb2], [1.99b], [lle@rahina.org])
 #AC_CANONICAL_TARGET
-#AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE
 #AM_MAINTAINER_MODE
 #AC_CONFIG_SRCDIR([src/libfakechroot.c])
 AC_CONFIG_HEADER([include/config.h])
