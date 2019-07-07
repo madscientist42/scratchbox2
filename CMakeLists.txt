@@ -59,8 +59,8 @@ LIST(APPEND PRELOAD_SOURCES libsb2.c sb_exec.c sb_l10n.c glob.c glob64.c
 PREPEND(PRELOAD_SOURCES ${LIBSB2_PATH} ${PRELOAD_SOURCES}) 
  
 # Specify our library now...
-ADD_LIBRARY(libsb2 SHARED ${PRELOAD_SOURCES} )
-TARGET_LINK_LIBRARIES(libsb2 luafw)
+ADD_LIBRARY(sb2 SHARED ${PRELOAD_SOURCES} )
+TARGET_LINK_LIBRARIES(sb2 luafw)
 
 # Clean up after ourselves with the pre-defined stuff...
 FOREACH(genFile ${GENERATED_CODE})
