@@ -11,9 +11,6 @@ Lauri Leukkunen <lle@rahina.org>:
 Valtteri Rahkonen <valtteri@rahkonen.fi>:
 	x86_64 port
 
-Riku Voipio <riku.voipio@movial.fi>:
-	debian/*
-
 Lauri T. Aarnio <lauri.aarnio@iki.fi>:
 	preload/gen-interface.pl
 	preload/interface.master
@@ -21,3 +18,6 @@ Lauri T. Aarnio <lauri.aarnio@iki.fi>:
 	utils/sb2-logz
 	utils/sb2-show.c
 
+Frank C. Earl <linusti@gmail.com> : 
+    CMake Build System rework
+    aarch64 support port
