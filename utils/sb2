@@ -15,7 +15,8 @@ if [ $(basename $my_path) != $(basename $0) ]; then
 fi
 
 
-SBOX_LIBSB2="libsb2.so.1"
+#SBOX_LIBSB2="libsb2.so.1"
+SBOX_LIBSB2="libsb2.so"
 	
 function version()
 {
