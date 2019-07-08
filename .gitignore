@@ -24,3 +24,5 @@ include/scratchbox2_version.h
 /CMakeFiles
 /cmake_install.cmake
 /build
+/install_manifest.txt
+Makefile
