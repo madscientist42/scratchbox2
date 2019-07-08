@@ -343,17 +343,14 @@ DEFAULT_CPUTRANSP=""
 case "$ARCH" in
 	$HOST_ARCH*) ;;
 
-	arm*)	DEFAULT_CPUTRANSP="qemu-$ARCH" ;;
-	ppc*)	DEFAULT_CPUTRANSP="qemu-$ARCH" ;;
-	mips*)	DEFAULT_CPUTRANSP="qemu-$ARCH" ;;
-	sh*)	DEFAULT_CPUTRANSP="qemu-$ARCH" ;;
+    # Handle default qemu-<x> supported transparency 
+	arm* | aarch64* | ppc* | mips* | sh* )	    
+        DEFAULT_CPUTRANSP="qemu-$ARCH" 
+        ;;
 
 	# No DEFAULT_CPUTRANSP for any of the x86 architectures:
-	i386*) ;;
-	i486*) ;;
-	i586*) ;;
-	i686*) ;;
-	amd64*) ;;
+	i386* | i486* | i586* | i686* | amd64* ) 
+        ;;
 
 	*)
 		echo "Unsupported target architecture: '$ARCH'"

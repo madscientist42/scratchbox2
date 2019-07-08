@@ -146,10 +146,11 @@ struct target_info {
 };
 
 static const struct target_info target_table[] = {
-	{ "arm",	EM_ARM,		ELFDATA2LSB,	1 },
-	{ "mips",	EM_MIPS,	ELFDATA2MSB,	1 },
-	{ "ppc",	EM_PPC,		ELFDATA2MSB,	0 },
-	{ "sh",		EM_SH, 		ELFDATA2LSB,	1 },
+	{ "aarch64",	EM_ARM,		ELFDATA2LSB,	1 },
+	{ "arm",	    EM_ARM,		ELFDATA2LSB,	1 },
+	{ "mips",	    EM_MIPS,	ELFDATA2MSB,	1 },
+	{ "ppc",	    EM_PPC,		ELFDATA2MSB,	0 },
+	{ "sh",		    EM_SH, 		ELFDATA2LSB,	1 },
 };
 
 static int elf_hdr_match(const char *region, uint16_t match, int ei_data);
